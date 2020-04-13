@@ -30,7 +30,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'vuetify/src/stylus/main.styl'
+    'vuetify/src/stylus/main.styl',
+    'global.styl'
   ],
 
   /*
@@ -53,8 +54,7 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-      
+    extend (config, ctx) {
       if (ctx.isServer) {
         config.externals = [
           nodeExternals({
